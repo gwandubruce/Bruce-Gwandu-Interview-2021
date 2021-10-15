@@ -8,6 +8,7 @@ import com.econetwireless.utils.constants.SystemConstants;
 import com.econetwireless.utils.enums.ResponseCode;
 import com.econetwireless.utils.messages.AirtimeBalanceResponse;
 import com.econetwireless.utils.pojo.INBalanceResponse;
+import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.transaction.annotation.Transactional;
@@ -33,7 +34,7 @@ public class EnquiriesServiceImpl implements EnquiriesService {
         LOGGER.info("Enquire airtime balance :: Partner Code : {}, Msisdn : {}", partnerCode, msisdn);
         final AirtimeBalanceResponse airtimeBalanceResponse = new AirtimeBalanceResponse();
         final SubscriberRequest subscriberRequest = populate(partnerCode, msisdn);
-        final SubscriberRequest createdSubscriberRequest = subscriberRequestDao.persist(subscriberRequest);
+        final List<SubscriberRequest>  createdSubscriberRequest = subscriberRequestDao.findByPartnerCode(subscriberRequest.getPartnerCode());
         final INBalanceResponse inBalanceResponse = chargingPlatform.enquireBalance(partnerCode, msisdn);
         changeSubscriberStateOnBalanceEnquiry(createdSubscriberRequest, inBalanceResponse);
         subscriberRequestDao.update(createdSubscriberRequest);
