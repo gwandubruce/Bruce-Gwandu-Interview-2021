@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN">
     <Properties>
-        <Property name="log-path">/data/logs/electronic-payments-api</Property>
+        <Property name="log-path">/Users/telecel/Desktop/cassava_interview/developer-task-01/data/logs</Property>
     </Properties>
     <Appenders>
         <Routing name="RoutingAppender">
@@ -42,6 +42,9 @@
         <Logger name="com.econetwireless" level="info" additivity="false">
             <AppenderRef ref="RoutingAppender" level="info"/>
         </Logger>
+         <Root level="info">
+      <AppenderRef ref="RoutingAppender"/>
+         </Root>
 
     </Loggers>
 </Configuration>
