@@ -36,8 +36,10 @@ public class EnquiriesServiceImpl implements EnquiriesService {
         final SubscriberRequest subscriberRequest = populate(partnerCode, msisdn);
         final List<SubscriberRequest>  createdSubscriberRequest = subscriberRequestDao.findByPartnerCode(subscriberRequest.getPartnerCode());
         final INBalanceResponse inBalanceResponse = chargingPlatform.enquireBalance(partnerCode, msisdn);
-        changeSubscriberStateOnBalanceEnquiry(createdSubscriberRequest, inBalanceResponse);
-        subscriberRequestDao.update(createdSubscriberRequest);
+        createdSubscriberRequest.stream()
+                .forEach(sr -> changeSubscriberStateOnBalanceEnquiry(sr, inBalanceResponse));
+        //changeSubscriberStateOnBalanceEnquiry(createdSubscriberRequest, inBalanceResponse);
+        subscriberRequestDao.save(createdSubscriberRequest);
         airtimeBalanceResponse.setResponseCode(inBalanceResponse.getResponseCode());
         airtimeBalanceResponse.setNarrative(inBalanceResponse.getNarrative());
         airtimeBalanceResponse.setMsisdn(msisdn);
