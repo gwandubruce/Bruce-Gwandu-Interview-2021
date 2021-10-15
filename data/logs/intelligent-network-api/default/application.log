@@ -15,3 +15,5 @@
 2021-10-15 15:19:27 INFO  IntelligentNetworkPublisher:22 --> Starting Intelligent network service....
 2021-10-15 15:19:27 INFO  IntelligentNetworkPublisher:24 --> Finished publishing WS
 2021-10-15 16:02:19 INFO  IntelligentNetworkServiceImpl:42 --> Msisdn : 263774222278, Balance : 31.0
+2021-10-15 16:08:45 INFO  IntelligentNetworkServiceImpl:42 --> Msisdn : 263774222278, Balance : 9.0
+2021-10-15 16:24:11 INFO  IntelligentNetworkServiceImpl:42 --> Msisdn : 263774222278, Balance : 918.0
