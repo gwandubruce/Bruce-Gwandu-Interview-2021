@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.econetwireless.epay.api.rest.resources.EpayResourcesIT
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 2.089 sec <<< FAILURE!
-shouldReturnStatusOkIfRequestsAreMoreThanOne(com.econetwireless.epay.api.rest.resources.EpayResourcesIT)  Time elapsed: 0.006 sec  <<< ERROR!
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 2.095 sec <<< FAILURE!
+shouldReturnStatusOkIfRequestsAreMoreThanOne(com.econetwireless.epay.api.rest.resources.EpayResourcesIT)  Time elapsed: 0.008 sec  <<< ERROR!
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
@@ -82,7 +82,7 @@ Caused by: javax.persistence.PersistenceException: You can only annotate one cal
 	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
 	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879)
 	... 59 more
-airtimeTopupShouldReturnResponseCodeSUCCESSIfAllOtherSystemsAreUp(com.econetwireless.epay.api.rest.resources.EpayResourcesIT)  Time elapsed: 0.002 sec  <<< ERROR!
+airtimeTopupShouldReturnResponseCodeSUCCESSIfAllOtherSystemsAreUp(com.econetwireless.epay.api.rest.resources.EpayResourcesIT)  Time elapsed: 0.001 sec  <<< ERROR!
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
