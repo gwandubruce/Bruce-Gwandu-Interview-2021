@@ -17,11 +17,16 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(path = "/resources/services", headers = {"Accept=application/json", "Accept=application/xml", "Accept=text/xml"})
 public class EpayResource {
 
-    private EpayRequestProcessor epayRequestProcessor;
+    private final EpayRequestProcessor epayRequestProcessor;
 
 
-    private ReportingProcessor reportingProcessor;
+    private final ReportingProcessor reportingProcessor;
 
+    public EpayResource(EpayRequestProcessor epayRequestProcessor, ReportingProcessor reportingProcessor) {
+        this.epayRequestProcessor = epayRequestProcessor;
+        this.reportingProcessor = reportingProcessor;
+    }
+    
     @GetMapping(value = "enquiries/{partnerCode}/balances/{mobileNumber}",
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public AirtimeBalanceResponse enquireAirtimeBalance( @PathVariable("partnerCode") final String pCode, @PathVariable("mobileNumber") final String msisdn) {

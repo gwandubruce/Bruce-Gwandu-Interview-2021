@@ -7,6 +7,7 @@ public enum ResponseCode {
 
     SUCCESS("200"), FAILED("500"), INVALID_REQUEST("400");
     private final String code;
+
     private ResponseCode(String code) {
         this.code = code;
     }
