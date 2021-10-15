@@ -35,7 +35,7 @@ public class CreditsServiceImpl implements CreditsService{
         LOGGER.info("Credit airtime Request : {}", airtimeTopupRequest);
         final AirtimeTopupResponse airtimeTopupResponse = new AirtimeTopupResponse();
         final SubscriberRequest subscriberRequest = populateSubscriberRequest(airtimeTopupRequest);
-        final SubscriberRequest createdSubscriberRequest = subscriberRequestDao.persist(subscriberRequest);
+        final SubscriberRequest createdSubscriberRequest = subscriberRequestDao.save(subscriberRequest);
         final INCreditResponse inCreditResponse = chargingPlatform.creditSubscriberAccount(populate(airtimeTopupRequest));
         changeSubscriberRequestStatusOnCredit(createdSubscriberRequest, inCreditResponse);
         subscriberRequestDao.update(createdSubscriberRequest);
