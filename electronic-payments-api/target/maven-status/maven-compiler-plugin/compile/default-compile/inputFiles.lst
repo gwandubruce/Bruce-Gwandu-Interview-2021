@@ -1,0 +1,10 @@
+/Users/telecel/Desktop/cassava_interview/developer-task-01/electronic-payments-api/src/main/java/com/econetwireless/epay/api/config/EpayApiWebConfig.java
+/Users/telecel/Desktop/cassava_interview/developer-task-01/electronic-payments-api/src/main/java/com/econetwireless/epay/api/processors/impl/EpayRequestProcessorImpl.java
+/Users/telecel/Desktop/cassava_interview/developer-task-01/electronic-payments-api/src/main/java/com/econetwireless/epay/api/processors/impl/ReportingProcessorImpl.java
+/Users/telecel/Desktop/cassava_interview/developer-task-01/electronic-payments-api/src/main/java/com/econetwireless/epay/api/rest/resources/EpayResource.java
+/Users/telecel/Desktop/cassava_interview/developer-task-01/electronic-payments-api/src/main/java/com/econetwireless/epay/api/config/EpayApiAspectConfig.java
+/Users/telecel/Desktop/cassava_interview/developer-task-01/electronic-payments-api/src/main/java/com/econetwireless/epay/api/processors/api/ReportingProcessor.java
+/Users/telecel/Desktop/cassava_interview/developer-task-01/electronic-payments-api/src/main/java/com/econetwireless/epay/api/aspects/RequestInterceptor.java
+/Users/telecel/Desktop/cassava_interview/developer-task-01/electronic-payments-api/src/main/java/com/econetwireless/epay/api/processors/api/EpayRequestProcessor.java
+/Users/telecel/Desktop/cassava_interview/developer-task-01/electronic-payments-api/src/main/java/com/econetwireless/epay/api/rest/messages/TransactionsResponse.java
+/Users/telecel/Desktop/cassava_interview/developer-task-01/electronic-payments-api/src/main/java/com/econetwireless/epay/api/webinitialisers/EpayApiWebAppInitializer.java
